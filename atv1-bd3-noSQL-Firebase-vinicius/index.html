@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD3 - ATV1 - FIREBASE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <h1> SISTEMA DE CADASTRO</h1>
+        <form id="add-student-form">
+            <input type="text" name="nome" placeholder="Nome do Aluno" required>
+            <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
+            <input type="text" id="rg" name="rg" placeholder="RG" required>
+            <input type="tel" id="telefoneAluno" name="telefoneAluno" placeholder="Telefone do Aluno" required>
+            <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" placeholder="Telefone do Responsável" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="date" name="dataNascimento" placeholder="Data de Nascimento" required>
+
+            <button>Cadastrar</button>
+                
+        </form>
+
+    </div>
+    
+    <ul id="student-list"></ul>
+</body>
+
+<!-- SDK DO FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+<!-- CONEXÃO COM O FIREBASE -->
+<script>
+    /*  DADOS DE CONEXÃO COM O FIREBASE  */
+    const firebaseConfig = {
+        apiKey: "AIzaSyBcmetg9_OdDlYikMpA2vhQuJkycnBfaik",
+        authDomain: "bd3-app-libri-vinicius.firebaseapp.com",
+        projectId: "bd3-app-libri-vinicius",
+        storageBucket: "bd3-app-libri-vinicius.appspot.com",
+        messagingSenderId: "232776148228",
+        appId: "1:232776148228:web:b9bf10920d3018744adc51"
+    };
+
+    /* INICIALIZA O FIREBASE */
+    firebase.initializeApp(firebaseConfig);
+
+    /* INICIALIZA O FIRESTORE */
+    const db = firebase.firestore();
+
+    // Set Firestore settings
+    const settings = { timestampsInSnapshots: true };
+    db.settings(settings);
+</script>
+
+<!-- IMPORTAÇÃO DO ARQUIVO app.js -->
+<script src="app.js"></script>
+
+</html>

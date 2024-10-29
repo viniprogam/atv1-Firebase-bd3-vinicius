@@ -1,0 +1,134 @@
+body{
+    background: #ffffff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #fff;
+    max-width: 960px;
+    margin: 30px auto;
+    padding:  20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px #5b8ef56b;
+    background-color: #ffffff;
+}
+
+.content h1 {
+    font-size: 40px;
+    color: #00073d;
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+form {
+    background-color: #6f85e8b3;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 2px 10px #0000001a;
+}
+
+input {
+    width: 80%;
+    border-radius: 7px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px 0;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder {
+    color: #ffffff;
+}
+
+input:focus {
+    border-color: #5b8ef5;
+}
+
+button {
+    background-color: #5b8ef5;
+    border-radius: 5px;
+    width: 8em;
+    height: 2.5em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px #00000033;
+}
+
+button:hover {
+    background-color: #05002e;
+    transform: translateY(-2px);
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none;
+    padding: 20px;
+    margin: 0;
+}
+
+li {
+    font-family: inherit;
+    padding: 15px;
+    background: #ffffff;
+    font-size: 18px;
+    color: #000;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 5px #0000001a;
+    transition: box-shadow 0.3s ease;
+}
+
+li:hover {
+    box-shadow: 0 3px 10px #00000033;
+}
+
+li span {
+    text-align: center;
+    display: block;
+    background-color: #5b8ef599;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: #edededea;
+}
+
+ul li div {
+    background: #00073d;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+ul li div:hover {
+    background: #f5262699;
+    transform: scale(1.05);
+}
